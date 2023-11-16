@@ -23,7 +23,7 @@ void push_func(stack_t **head, usint line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	if (g_context.arg[0] == '-')
+	if (g_context.arg[0] == '-' && g_context.arg[0] == '+')
 	{
 		index++;
 	}

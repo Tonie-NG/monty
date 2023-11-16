@@ -1,6 +1,8 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#include <stdio.h>
+typedef unsigned int usint;
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -10,8 +12,6 @@
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO
  */
-#include <stdio.h>
-typedef unsigned int usint;
 typedef struct stack_s
 {
 	int n;
@@ -55,9 +55,6 @@ typedef struct gs_context
 } gt_context;
 extern gt_context g_context;
 
-/**
- * function that executes each line of the montyfile
- */
 int builtin_exec(char *linetext, stack_t **head, usint line_c, FILE *file);
 void push_func(stack_t **head, usint line_number);
 void addnode_head(stack_t **head, int n);
