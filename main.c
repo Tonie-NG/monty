@@ -35,6 +35,7 @@ int main(int argc, char *argv[])
 
 	filename = argv[1];
 	file = fopen(filename, "r");
+	g_context.file = file;
 	if (file == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", filename);
